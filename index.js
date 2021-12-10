@@ -23,4 +23,12 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/features", (req, res) => {
+  res.render("features", {
+    title: "Features",
+    layout: "layouts/main-layout",
+    background: "bg-img3",
+  });
+});
+
 app.listen(port, () => console.log(`Program running port ${port}`));
