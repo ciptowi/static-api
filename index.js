@@ -31,4 +31,12 @@ app.get("/features", (req, res) => {
   });
 });
 
+app.get("/requirements", (req, res) => {
+  res.render("requirements", {
+    title: "Requirements",
+    layout: "layouts/main-layout",
+    background: "bg-img4",
+  });
+});
+
 app.listen(port, () => console.log(`Program running port ${port}`));
