@@ -15,6 +15,13 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/game", (req, res) => {
+  res.render("game", {
+    title: "Rock Paper Scissors",
+    layout: "layouts/game-layout",
+  });
+});
+
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About",
