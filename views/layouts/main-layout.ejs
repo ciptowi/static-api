@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <title><%= title %></title>
+  </head>
+  <body id="bg-img1">
+
+    <!-- navbar --> 
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top transparan">
+      <a class="navbar-brand" href="/">LOGO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="navbar-nav ml-auto text-sm-center">
+          <a class="nav-link mx-3" href="/">HOME</a>
+          <a class="nav-link mx-3" href="about">ABAOUT</a>
+          <a class="nav-link mx-3" href="features">FEATURES</a>
+          <a class="nav-link mx-3" href="requirements">REQUIREMENTS</a>
+          <a class="nav-link mx-3" href="quotes">QUOTES</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link btn btn-sm btn-outline-success mx-2" data-toggle="modal" data-target="#exampleModalSignUp">SIGN UP</a>
+          <a class="nav-link btn btn-sm btn-outline-success mx-2" data-toggle="modal" data-target="#exampleModalLogin">LOGIN</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal Sign Up -->
+    <div class="modal fade" id="exampleModalSignUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Please Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            <div class="login text-center align-items-center">
+              <form>
+                <h1 class="h3 mb-3 font-weight-normal">Sign up to play this games with your friends.</h1>
+                <div class="form-group text-left">
+                  <label for="exampleInputEmail1">Full Name :</label>
+                  <input type="text" class="form-control" placeholder="Full Name">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputNumber">Mobile Number :</label>
+                  <input type="tel" name="phone" pattern="[0-9]{12}" class="form-control" placeholder="Mobile Number">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleFormControlSelect2">Gender :</label>
+                  <select class="form-control" id="exampleFormControlSelect2">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputEmail1">Email address :</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email addres">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputPassword1">Password :</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group text-left">
+                  <label for="exampleInputPassword1">Comfirm Password :</label>
+                  <input type="password" class="form-control" id="exampleInputComfirmPassword1" placeholder="Confirm Pasword">
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">I agree to create My Account</label>
+                </div>
+                <button type="submit" class="btn btn-success">SIGN UP</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="exampleModalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+            <div class="login text-center align-items-center">
+              <form class="form-signin">
+                <img class="mb-4" src="assets/User.png" alt="" width="72" height="72">
+                <h1 class="h3 mb-3 font-weight-normal">Player Account</h1>
+                <label for="inputUsernamel" class="sr-only">Username</label>
+                <input type="email" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <div class="checkbox mb-3">
+                  <label>
+                  <input type="checkbox" value="remember-me"> Remember me
+                  </label>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-lg btn-success btn-block" type="submit">LOGIN</button>
+                </div>
+                <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<%- body %> 
+
+    <!-- Footer -->
+    <footer class="transparan fixed-bottom py-1">
+      <div class="containerr">
+        <div class="text-center text-light">
+        &copy; Copyright <strong><span>2021</span></strong>. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
