@@ -39,4 +39,12 @@ app.get("/requirements", (req, res) => {
   });
 });
 
+app.get("/quotes", (req, res) => {
+  res.render("quotes", {
+    title: "Quotes",
+    layout: "layouts/main-layout",
+    background: "bg-img5",
+  });
+});
+
 app.listen(port, () => console.log(`Program running port ${port}`));
