@@ -2,10 +2,12 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const expressLayouts = require("express-ejs-layouts");
+const users = require("./db/users.json");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(expressLayouts);
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.render("home", {
@@ -17,7 +19,17 @@ app.get("/", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.sendFile(__dirname + "/public/login.html");
-  // redirect("/game.html");
+});
+
+app.post("/login", (req, res) => {
+  let username = req.body.username;
+  let password = req.body.password;
+  if (
+    users.find((item) => item.username === username) &&
+    users.find((item) => item.password === password)
+  ) {
+    res.status(200).redirect("/game.html");
+  }
 });
 
 app.get("/register", (req, res) => {

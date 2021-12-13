@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "fullName": "Cipto Widarto",
+    "username": "cipto",
+    "mobilePhone": "085732737258",
+    "gender": "male",
+    "email": "ciptowidarto@gmail.com",
+    "password": "112233"
+  },
+  {
+    "id": 2,
+    "fullName": "Binar Academy",
+    "username": "binar",
+    "mobilePhone": "085555555555",
+    "gender": "male",
+    "email": "binar@gmail.com",
+    "password": "012345"
+  }
+]
