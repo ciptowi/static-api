@@ -95,4 +95,8 @@ app.get("/quotes", (req, res) => {
   });
 });
 
+app.use((req, res, next) => {
+  res.status(404).redirect("/404.html");
+});
+
 app.listen(port, () => console.log(`Program running port ${port}`));
