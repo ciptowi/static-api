@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  res.sendFile(__dirname + "/public/login.html");
+  res.redirect("/login.html");
 });
 
 app.post("/login", (req, res) => {
@@ -30,7 +30,9 @@ app.post("/login", (req, res) => {
     users.find((item) => item.username === username) &&
     users.find((item) => item.password === password)
   ) {
-    res.status(201).redirect("/game.html");
+    res.status(201).render("game", {
+      layout: "layouts/game-layout",
+    });
   }
 });
 
@@ -39,7 +41,7 @@ app.get("/forgotten", (req, res) => {
 });
 
 app.get("/register", (req, res) => {
-  res.status(200).sendFile(__dirname + "/public/register.html");
+  res.status(200).redirect("/register.html");
 });
 
 app.get("/register/:id", (req, res) => {
