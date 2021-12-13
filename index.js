@@ -30,13 +30,37 @@ app.post("/login", (req, res) => {
     users.find((item) => item.username === username) &&
     users.find((item) => item.password === password)
   ) {
-    res.status(200).redirect("/game.html");
+    res.status(201).redirect("/game.html");
   }
 });
 
+app.get("/forgotten", (req, res) => {
+  res.status(200).json(users);
+});
+
 app.get("/register", (req, res) => {
-  res.sendFile(__dirname + "/public/register.html");
-  // redirect("/login.html");
+  res.status(200).sendFile(__dirname + "/public/register.html");
+});
+
+app.get("/register/:id", (req, res) => {
+  const user = users.find((i) => i.id === +req.params.id);
+  res.status(200).json(user);
+});
+
+app.post("/register", (req, res) => {
+  const { fullName, username, mobilePhone, gender, email, password } = req.body;
+  const id = users[users.length - 1].id + 1;
+  const post = {
+    id,
+    fullName,
+    username,
+    mobilePhone,
+    gender,
+    email,
+    password,
+  };
+  users.push(post);
+  res.status(201).redirect("/login.html");
 });
 
 app.get("/about", (req, res) => {
