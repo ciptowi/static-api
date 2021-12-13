@@ -15,11 +15,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/login", (req, res) => {
+  res.sendFile(__dirname + "/public/login.html");
+});
+
 app.get("/game", (req, res) => {
-  res.render("game", {
-    title: "Rock Paper Scissors",
-    layout: "layouts/game-layout",
-  });
+  res.status(200).redirect("/game.html");
 });
 
 app.get("/about", (req, res) => {
