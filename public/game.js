@@ -6,17 +6,6 @@ const computer = document.getElementsByClassName("img-com");
 let scoreP = 0;
 let scoreC = 0;
 
-//---------- fungsi login
-const login = function login() {
-  const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  if (username === "" || password === "") {
-    alert("Anda harus login!\nMasukkan username dan password");
-  } else {
-    window.location = "./game.html";
-  }
-};
-
 //----- computer memilih random
 let boot = getCom();
 function getCom() {
